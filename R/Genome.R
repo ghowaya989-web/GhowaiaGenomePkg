@@ -11,7 +11,8 @@ setGeneric("avgProteinPerCh", function(object) {
   standardGeneric("avgProteinPerCh")
 })
 
+#' @export
 setMethod("avgProteinPerCh", "Genome", function(object) {
-  avg = object@num_proteins / object@num_chromosomes
+  avg = object@num_proteins/object@num_chromosomes
   return(round(avg))
 })
